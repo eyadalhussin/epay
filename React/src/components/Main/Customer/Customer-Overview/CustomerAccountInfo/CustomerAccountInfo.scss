@@ -1,0 +1,29 @@
+@import "/src/styles/breakpoints";
+@import "/src/styles/grid";
+@import "/src/styles/colors";
+
+.account-info-container {
+  @extend .row;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 1em;
+  @include md {
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 0em;
+  }
+}
+
+.m-h-180 {
+  @include sm {
+    min-height: 180px;
+  }
+  @include md{
+    min-height: 240px;
+  }
+  @include lg{
+    min-height: 180px;
+  }
+}

@@ -1,0 +1,8 @@
+.max-height{
+    max-height: calc(44px * 7);
+    overflow-y: scroll;
+}
+
+.no-scroll::-webkit-scrollbar{
+    display: none;
+}

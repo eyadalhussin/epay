@@ -1,0 +1,23 @@
+@import '/src/styles/breakpoints';
+@import '/src/styles/grid';
+@import '/src/styles/colors';
+
+.btn-approve{
+    all: unset;
+    cursor: pointer;
+    background-color: map-get($map: $colors, $key: 'prim-700');
+    color: white;
+    text-align: center;
+    padding: 0.2em 0.5em;
+    border-radius: 5px;
+    font-size: 0.9em;
+    font-weight: 600;
+    transition: 0.2s ease;
+    &:hover{
+        background-color: map-get($map: $colors, $key: 'prim-600');
+    }
+
+    &.disabled{
+        background-color: map-get($map: $colors, $key: 'white-hover');
+    }
+}

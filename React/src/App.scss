@@ -1,0 +1,62 @@
+@import "styles/index.scss";
+
+.h-divider {
+  width: 100%;
+  height: 1px;
+  border-radius: 5px;
+  background-color: rgba($color: #000000, $alpha: 0.2);
+}
+
+.payment-icon {
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  background-color: map-get($map: $colors, $key: "prim-700");
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  span {
+    color: white;
+  }
+}
+
+.icon-container {
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.relative{
+    position: relative;
+}
+
+/* FadeIn.css */
+@keyframes fadeIn {
+  from {
+      opacity: 0;
+  }
+  to {
+      opacity: 1;
+  }
+}
+
+.fade-in {
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+.no-deco{
+  text-decoration: none;
+}
+
+.input-date{
+  padding: 0.3em;
+  font-family: 'Roboto';
+  border-radius: 5px;
+  border: 1px solid rgba($color: #000000, $alpha: 0.3);
+  background-color: #ffffff;
+  max-width: 100%;
+  height: 25px;
+}

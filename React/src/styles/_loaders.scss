@@ -1,0 +1,107 @@
+@import "./_colors.scss";
+
+.loading-container {
+  max-width: 100%;
+  padding: 1em;
+  border-radius: 5px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 1em;
+
+  span {
+    font-weight: 700;
+    font-size: 1.2em;
+  }
+
+  &.idle{
+    .loader{
+      display: none;
+    }
+    .message{
+      display: none;
+    }
+  }
+
+  &.loading {
+    background-color: map-get($map: $colors, $key: "prim-50");
+    border: 2px solid map-get($map: $colors, $key: "prim-700");
+    .message {
+      color: map-get($map: $colors, $key: "prim-700");
+    }
+  }
+
+  &.error {
+    background-color: map-get($map: $colors, $key: "danger-50");
+    border: 2px solid map-get($map: $colors, $key: "danger-700");
+    .message {
+      color: map-get($map: $colors, $key: "danger-700");
+    }
+    .loader {
+      display: none;
+    }
+  }
+
+  &.success {
+    background-color: map-get($map: $colors, $key: "succ-50");
+    border: 2px solid map-get($map: $colors, $key: "succ-700");
+    .message {
+      color: map-get($map: $colors, $key: "succ-700");
+    }
+    .loader {
+      display: none;
+    }
+  }
+}
+
+.loader {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  display: inline-block;
+  border-top: 4px solid #fff;
+  border-right: 4px solid transparent;
+  box-sizing: border-box;
+  animation: rotation 1s linear infinite;
+}
+.loader::after {
+  content: "";
+  box-sizing: border-box;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  border-bottom: 4px solid map-get($map: $colors, $key: "prim-700");
+  border-left: 4px solid map-get($map: $colors, $key: "prim-300");
+}
+@keyframes rotation {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.page-loader-container{
+    // position: absolute;
+    // top: 0;
+    // left: 0;
+    // height: 100%;
+    // width: 100%;
+    // background-color: rgba($color: #000000, $alpha: 0.3);
+    // display: flex;
+    // justify-content: center;
+    // align-items: center;
+    // transition: 0.3s ease;
+    // .message-container{
+    //   padding: 3em;
+    //   display: flex;
+    //   flex-direction: column;
+    //   justify-content: center;
+    //   align-items: center;
+    //   border-radius: 5px;
+    // }
+}

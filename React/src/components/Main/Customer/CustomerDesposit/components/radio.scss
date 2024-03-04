@@ -1,0 +1,23 @@
+@import "/src/styles/colors";
+
+.radio-container{
+    position: absolute;
+    top: 50%;
+    left: 5%;
+    transform: translateY(-50%);
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    border: 1px solid rgba($color: #000000, $alpha: 0.3);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    &.active{
+        .radio{
+            width: 60%;
+            height: 60%;
+            border-radius: 50%;
+            background-color: map-get($map: $colors, $key: 'prim-700');
+        }
+    }
+}

@@ -1,0 +1,69 @@
+
+$colors: (
+  black-500: #000000,
+  txt: #49454F,
+  txt-light: #49454F,
+
+  white-500: #ffffff,
+  white-bg: #fafafa,
+  white-hover: #f1f1f1,
+
+  prim-50: #EEFAFF,
+  prim-100: #DAF3FF,
+  prim-200: #BDEBFF,
+  prim-300: #8FE0FF,
+  prim-400: #5ACCF7,
+  prim-500: #34B0FD,
+  prim-600: #1E93F2,
+  prim-700: #167BDF,
+  prim-800: #1962B4,
+  prim-900: #145A8E,
+  prim-950: #153456,
+
+  succ-50: #eefbf3,
+  succ-100: #d5f6e1,
+  succ-200: #aeecc7,
+  succ-300: #7adba8,
+  succ-400: #43c484,
+  succ-500: #25c279,
+  succ-600: #138854,
+  succ-700: #0f6d45,
+  succ-800: #0f5639,
+  succ-900: #0d4730,
+  succ-950: #06281b,
+
+  danger-50:#fef2f3,
+  danger-100: #fee2e3,
+  danger-200: #fdcbcd,
+  danger-300: #faa7ab,
+  danger-400: #f67379,
+  danger-500: #ec474f,
+  danger-600: #d92932,
+  danger-700: #b61f26,
+  danger-800: #971d23,
+  danger-900: #7d1f24,
+  danger-950: #440b0e,
+
+  warn-50: #FFF3E0,
+  warn-100: #FFE0B2,
+  warn-200: #FFCC80,
+  warn-300: #FFB74D,
+  warn-400: #FFA726,
+  warn-500: #FF9800,
+  warn-600: #FB8C00,
+  warn-700: #F57C00,
+  warn-800: #EF6C00,
+  warn-900: #E65100
+);
+
+@each $key, $value in $colors {
+  .c-#{$key} {
+    color: $value;
+  }
+};
+
+@each $key, $value in $colors {
+  .bg-#{$key} {
+      background-color: $value;
+  }
+};

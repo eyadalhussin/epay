@@ -1,0 +1,63 @@
+.dd-cont {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid rgba($color: #000000, $alpha: 0.3);
+  transition: 0.1s ease;
+  position: relative;
+  cursor: pointer;
+  border-radius: 5px;
+  // height: 25px;
+  padding: 0.5em 0.5em;
+  background-color: #ffffff;
+
+  .value {
+    color: map-get($map: $colors, $key: "txt");
+    font-size: 16px;
+    font-weight: 500;
+  }
+
+  .options {
+    display: none;
+  }
+
+  &.active {
+    border-radius: 0px;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    .options {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: center;
+      position: absolute;
+      flex-wrap: nowrap;
+      top: 100%;
+      // min-width: 102%;
+      width: 100%;
+      transform: scaleY(0);
+      border: 1px solid rgba($color: #000000, $alpha: 0.3);
+      background-color: map-get($map: $colors, $key: "white-bg");
+      transition: 0.3s ease;
+      animation: slideY 0.3s ease forwards;
+      cursor: pointer;
+      .option {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0.3em 0em;
+        &:hover {
+          background-color: map-get($map: $colors, $key: "white-hover");
+        }
+      }
+    }
+  }
+}
+
+@keyframes slideY {
+  to{
+    transform: scaleY(1);
+    transform-origin: top;
+  }
+}

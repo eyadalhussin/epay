@@ -1,0 +1,18 @@
+@import '/src/styles/breakpoints';
+@import '/src/styles/grid';
+@import '/src/styles/colors';
+
+.main-container{
+    // @extend .container;
+    padding: 20px;
+    @include sm{
+    }
+    @include md{
+        margin-top: 2em;
+        margin-left: 75px
+    }
+
+    @include lg{
+        margin-left: 250px;
+    }
+}

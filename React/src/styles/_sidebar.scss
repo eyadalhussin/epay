@@ -1,0 +1,97 @@
+@import "./_colors.scss";
+
+.sidebar {
+  display: none;
+  height: 100vh;
+  min-height: 100vh;
+  //background-color: map-get($map: $colors, $key: 'c-white-500');
+  background-color: #ffffff;
+  position: fixed;
+  top: 0;
+  left: 0;
+  box-shadow: 2px 0px 10px rgba($color: #000000, $alpha: 0.1);
+
+  @include md {
+    display: flex;
+    flex-direction: column;
+    width: 75px;
+    gap: 2em;
+  }
+
+  @include lg {
+    width: 250px;
+  }
+
+  .logo-container {
+    height: 70px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .navs-header {
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    .header {
+      font-size: 1.1em;
+      font-weight: 500;
+      padding-left: 1em;
+    }
+  }
+
+  .navs-container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1em;
+    .nav {
+      text-decoration: none;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 0.5em;
+      width: 80%;
+      transition: 0.2s ease;
+      padding: 0.5em;
+      border-radius: 5px;
+      cursor: pointer;
+      &:hover {
+        background-color: map-get($map: $colors, $key: "prim-700");
+        span {
+          transition: 0.2s ease;
+          color: white;
+        }
+      }
+      &.active {
+        background-color: map-get($map: $colors, $key: "prim-700");
+        span {
+          transition: 0.2s ease;
+          color: white;
+        }
+      }
+      @include md {
+        width: 40%;
+      }
+    }
+  }
+
+  .divider {
+    width: 100%;
+    height: 1px;
+    background-color: rgba($color: #000000, $alpha: 0.2);
+  }
+
+  .no-display {
+    @include md {
+      display: none;
+    }
+    @include lg {
+      display: block;
+    }
+  }
+}

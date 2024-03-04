@@ -1,0 +1,69 @@
+@import "./_colors.scss";
+
+.table-container {
+  .table-header {
+    // background-color: map-get($map: $colors, $key: );
+    background-color: #f1f4f9;
+    display: flex;
+    padding: 0.5em;
+    border-radius: 5px;
+    .t-head {
+      flex: 1;
+      span {
+        font-weight: 700;
+        color: map-get($map: $colors, $key: "txt");
+      }
+    }
+  }
+
+  .table-body {
+    display: flex;
+    flex-direction: column;
+    .table-body-item {
+      display: flex;
+      padding: 0.5em;
+      border-bottom: 1px solid rgba($color: #000000, $alpha: 0.1);
+      transition: 0.3s ease;
+      .t-body {
+        flex: 1;
+      }
+    }
+  }
+}
+
+.t-status {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 80%;
+  padding: 5px 0em;
+  &.danger {
+    background-color: map-get($map: $colors, $key: "danger-100");
+    border: 1px solid map-get($map: $colors, $key: "danger-500");
+    border-radius: 5px;
+    span {
+      color: map-get($map: $colors, $key: "danger-700");
+    }
+  }
+  &.success {
+    background-color: map-get($map: $colors, $key: "succ-100");
+    border: 1px solid map-get($map: $colors, $key: "succ-500");
+    border-radius: 5px;
+    span {
+      color: map-get($map: $colors, $key: "succ-700");
+    }
+  }
+}
+
+.if-md {
+  display: none;
+  @include md {
+    display: flex;
+  }
+}
+
+.t-body-hover{
+  &:hover{
+    background-color: #f9f9f9;
+  }
+}
