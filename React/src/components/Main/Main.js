@@ -1,4 +1,4 @@
-import { BrowserRouter, Routes, Route, useNavigate, useLocation } from "react-router-dom";
+import { BrowserRouter, Routes, Route, useNavigate, useLocation, Navigate } from "react-router-dom";
 import './Main.scss';
 
 import Customer from "./Customer/Customer";
@@ -41,6 +41,7 @@ function Main() {
                     </Route>
                     <Route path="login" element={<Login />}>
                     </Route>
+                    <Route path="*" element={<Navigate to="/login" />} />
                 </Routes>
         </div>
     );
